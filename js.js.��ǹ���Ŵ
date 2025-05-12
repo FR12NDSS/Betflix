@@ -1,0 +1,26 @@
+$('#carouselExampleControls .carousel-item:first').addClass('active');
+
+
+
+    $('.overlaysidebar').on('click', function () {
+        $('.insidebarleft').toggleClass('active');
+        $('.overlaysidebar').toggleClass('active');
+        $('.sidebarCollapse').toggleClass('open');
+    });
+    $('.sidebarCollapse').on('click', function () {
+        $('.insidebarleft').toggleClass('active');
+        $('.overlaysidebar').toggleClass('active');
+        $('.sidebarCollapse').toggleClass('open');
+    });
+
+
+$(window).scroll(function(){
+    if($(window).scrollTop() == $(window).height() > $(document).height() - 150) {
+        $('.sidebarCollapse').removeClass('sticky');
+         $('.top-bar').removeClass('sticky');
+
+    }else{
+         $('.top-bar').addClass('sticky');
+     $('.sidebarCollapse').addClass('sticky');
+ }
+});             
